@@ -1,0 +1,28 @@
+{
+  "name": "wipay-node",
+  "version": "1.0.0",
+  "description": "Wipay Payment NodeJs Wrapper",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amansharma5/wipay.git"
+  },
+  "keywords": [
+    "wipay",
+    "payment",
+    "debit",
+    "credit"
+  ],
+  "author": "Aman Sharma, amansharma5@hotmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amansharma5/wipay/issues"
+  },
+  "homepage": "https://github.com/amansharma5/wipay#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
