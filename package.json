@@ -1,6 +1,6 @@
 {
   "name": "wipay-node",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Wipay Payment NodeJs Wrapper",
   "main": "app.js",
   "scripts": {

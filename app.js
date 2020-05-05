@@ -1,4 +1,4 @@
-var request = require('http');
+var Request = require('request');
 
 var payment_url = {
     "Live" : "https://wipayfinancial.com/v1/gateway_live",
@@ -25,13 +25,13 @@ module.exports = {
 				    email : data.email,
 				    name : data.name,
 				    order_id : data.order_id,
-				    payment_id: data.payment_id,
-				    transaction_id:data.transaction_id,
+				    // payment_id: data.payment_id,
+				    // transaction_id:data.transaction_id,
 				    return_url : data.return_url,
 				    developer_id : data.developer_id || "1"
                 }
 
-            request.post({url : payment_url[this.mode], params }, function(error, response, body) {
+                Request.post({url : payment_url[this.mode], params }, function(error, response, body) {
                 if (!error) {
                     var result = response.headers.location;
                     resolve(body);
