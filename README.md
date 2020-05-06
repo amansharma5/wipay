@@ -4,7 +4,7 @@ Wipay payment Integration
 The wipay-node library provides convenient access to the wipay API from applications written in server-side JavaScript.
 
 ### Documentation
-See the [Wipay API docs](https://wipaycaribbean.com/credit-card-documentation).
+See the [Wipay API docs](https://wipaycaribbean.com).
 
 The package needs to be configured with Production Mode.
 
@@ -39,9 +39,14 @@ var paymentData = {
 	developer_id : "", // developer_id from account or "1" for sandbox
 }
 
-let url = await wipay.createPayment(paymentData);
+let url = await wipay.create_payment(paymentData);
 
 ```
+### Test Credit Card
+Card Number : 4111111111111111
+Card CVV : 123
+Expiry Month : 01
+Expiry Year : 25
 
 
 ---

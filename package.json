@@ -1,6 +1,6 @@
 {
   "name": "wipay-node",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The wipay-node library provides convenient access to the wipay API from applications written in server-side JavaScript.",
   "main": "app.js",
   "scripts": {
