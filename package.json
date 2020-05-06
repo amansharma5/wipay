@@ -1,7 +1,7 @@
 {
   "name": "wipay-node",
-  "version": "1.0.2",
-  "description": "Wipay Payment NodeJs Wrapper",
+  "version": "1.0.3",
+  "description": "The wipay-node library provides convenient access to the wipay API from applications written in server-side JavaScript.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,17 +12,19 @@
   },
   "keywords": [
     "wipay",
+    "wipay-node",
     "payment",
-    "debit",
-    "credit"
+    "debit card",
+    "credit card"
   ],
-  "author": "Aman Sharma, amansharma5@hotmail.com",
+  "author": {
+    "name":"Aman Sharma",
+    "email": "amansharma5@hotmail.com",
+    "url": "https://www.linkedin.com/in/aman-sharma-0a95a0b5/"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/amansharma5/wipay/issues"
   },
-  "homepage": "https://github.com/amansharma5/wipay#readme",
-  "dependencies": {
-    "request": "^2.88.2"
-  }
+  "homepage": "https://github.com/amansharma5/wipay#readme"
 }

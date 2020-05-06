@@ -8,43 +8,34 @@ var payment_url = {
 module.exports = {
     mode : "Sandbox",
 
-    isProdMode: (mode)=> {
+    ProductionMode: (mode)=> {
         if (mode) {
             this.mode = 'Live';
         } else {
             this.mode = 'Sandbox';
         }
     },
-
-    makePayment: async(data)=> {
-        return await new Promise((resolve, reject)=>{
+    create_payment: (payloadData)=> {
+        return new Promise((resolve, reject)=>{
             try {
-                var params = {
-                    total : data.total,
-				    phone : data.phone,
-				    email : data.email,
-				    name : data.name,
-				    order_id : data.order_id,
-				    // payment_id: data.payment_id,
-				    // transaction_id:data.transaction_id,
-				    return_url : data.return_url,
-				    developer_id : data.developer_id || "1"
+                var formData = {
+                    total : payloadData.total,
+				    phone : payloadData.phone,
+				    email : payloadData.email,
+				    name : payloadData.name,
+				    order_id : payloadData.order_id,
+				    return_url : payloadData.return_url,
+				    developer_id : payloadData.developer_id?payloadData.developer_id : '1'
                 }
-
-                Request.post({url : payment_url[this.mode], params }, function(error, response, body) {
-                if (!error) {
-                    var result = response.headers.location;
-                    resolve(body);
-                    }
-                else{
-                    reject(error.message);
-                }
-            });
+                Request.post({url : payment_url[this.mode], formData },(error, httpResponse, body)=> {
+                if (error) reject(error.message);
+                let result = httpResponse.headers.location;
+                resolve(result);
+                });
             } catch (error) {
                 reject(error.message)
             }
         })
-        
     }
 }
 
